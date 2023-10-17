@@ -1,0 +1,16 @@
+.land {
+    font-size: 33px;
+    color: dodgerblue;
+}
+.oren {
+    font-size: 15px;
+    color: rgb(255, 184, 30);
+}
+.neighbours {
+    font-size: 20px;
+    color: darkgreen;
+}
+li {
+    list-style-type: none;
+    
+  }
