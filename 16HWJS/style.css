@@ -1,15 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+form {
+    padding: 20px 0;
+    margin: auto;
+
+    
+
+}
+
+
+
 .land {
     font-size: 33px;
-    color: dodgerblue;
+    color: rgb(30, 68, 103);
+    padding: 5px 0;
+    
 }
 .oren {
     font-size: 15px;
-    color: rgb(255, 184, 30);
+    color: rgb(150, 115, 40);
 }
 .neighbours {
+    
     font-size: 20px;
     color: darkgreen;
 }
+
 li {
     list-style-type: none;
     

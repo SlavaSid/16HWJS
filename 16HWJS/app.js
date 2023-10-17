@@ -4,13 +4,13 @@ const form = document.querySelector('form');
 const input = document.querySelector('input');
 const land = document.querySelector('.land');
 const neighbours = document.querySelector('.neighbours');
-const message = document.querySelector('.error')
+
 
 const render = (search) => {
-    message.textContent = '';
+   
     const langString = search.name.official;
     langString.value = '';
-    land.innerHTML = `<p>${langString}</p><p class="oren">Страны соседи</p>`;
+    land.innerHTML = `<p>${langString}</p><p class="oren">страны соседи:</p>`;
     neighbours.textContent = '';
 
 
@@ -44,7 +44,7 @@ form.addEventListener('submit', (event) => {
         if(!response.ok){
             neighbours.textContent = '';  
             land.textContent = '';   
-        message.textContent = `неверное название страны`;}
+            land.textContent = `неверное название страны`;}
     else{return response.json()};})
     .then(data => {
     const [search] = data;
