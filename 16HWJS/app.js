@@ -7,7 +7,7 @@ const neighbours = document.querySelector('.neighbours');
 const message = document.querySelector('.error')
 
 const render = (search) => {
-    message.remove();
+    message.textContent = '';
     const langString = search.name.official;
     langString.value = '';
     land.innerHTML = `<p>${langString}</p><p class="oren">Страны соседи</p>`;
@@ -40,7 +40,11 @@ form.addEventListener('submit', (event) => {
     }
     input.value = '';
     fetch(url)
-    .then(response => {if(!response.ok){message.innerHTML = `неверное название страны`;}
+    .then(response => { 
+        if(!response.ok){
+            neighbours.textContent = '';  
+            land.textContent = '';   
+        message.textContent = `неверное название страны`;}
     else{return response.json()};})
     .then(data => {
     const [search] = data;
